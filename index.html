@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawny Tail Grooming & More | Scarborough</title>
+  <meta name="description" content="Pawny Tail Grooming & More in Scarborough, Ontario. Soft, playful pet grooming website concept tailored to the brand." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff8fb;
+      --bg2:#fffdf8;
+      --pink:#f59bb5;
+      --pink-deep:#df6f93;
+      --pink-soft:#ffe6ef;
+      --mint:#b9ddc9;
+      --mint-deep:#7aa98d;
+      --cream:#fff4ea;
+      --peach:#f4c5a9;
+      --text:#523d45;
+      --muted:#7b6770;
+      --line:#f3d8e2;
+      --card:#ffffff;
+      --shadow:0 18px 45px rgba(223,111,147,.12);
+      --soft-shadow:0 10px 28px rgba(82,61,69,.07);
+      --radius:28px;
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Nunito", Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(245,155,181,.12), transparent 25%),
+        radial-gradient(circle at right, rgba(185,221,201,.18), transparent 28%),
+        linear-gradient(to bottom, var(--bg), var(--bg2));
+      line-height:1.65;
+    }
+
+    a{text-decoration:none;color:inherit}
+    .container{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:40;
+      background:rgba(255,248,251,.84);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(243,216,226,.8);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .brand-mark{
+      width:60px;
+      height:60px;
+      border-radius:20px;
+      background:linear-gradient(135deg,#fff,#fff0f5);
+      display:grid;
+      place-items:center;
+      border:1px solid var(--line);
+      box-shadow:var(--soft-shadow);
+      flex:0 0 auto;
+    }
+
+    .brand h1{
+      margin:0;
+      font-family:"Fredoka", sans-serif;
+      font-size:31px;
+      line-height:.95;
+      color:var(--pink-deep);
+      letter-spacing:.01em;
+    }
+
+    .brand p{
+      margin:3px 0 0;
+      color:#90727f;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:800;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-weight:800;
+      font-size:14px;
+    }
+
+    .nav-links a{color:#6c5862;transition:.2s ease}
+    .nav-links a:hover{color:var(--pink-deep)}
+    .nav-links .dm-btn{
+      padding:12px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--pink),var(--pink-deep));
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .hero{
+      padding:80px 0 54px;
+      overflow:hidden;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 15px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--soft-shadow);
+      color:var(--mint-deep);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow .spark{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--mint-deep),var(--mint));
+    }
+
+    .hero h2{
+      margin:18px 0 14px;
+      font-family:"Fredoka", sans-serif;
+      font-size:74px;
+      line-height:.92;
+      letter-spacing:-.02em;
+      color:var(--text);
+    }
+
+    .hero .lead{
+      margin:0;
+      max-width:630px;
+      color:var(--muted);
+      font-size:18px;
+      line-height:1.85;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:15px 22px;
+      border-radius:18px;
+      font-size:14px;
+      font-weight:800;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--pink),var(--pink-deep));
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-secondary{
+      background:#fff;
+      border:1px solid var(--line);
+      color:var(--text);
+      box-shadow:var(--soft-shadow);
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-2px);
+      border-color:var(--pink);
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--line);
+      border-radius:34px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-card:after{
+      content:"";
+      position:absolute;
+      right:-60px;
+      bottom:-70px;
+      width:180px;
+      height:180px;
+      background:radial-gradient(circle, rgba(185,221,201,.28), transparent 70%);
+      pointer-events:none;
+    }
+
+    .pet-scene{
+      min-height:360px;
+      border-radius:28px;
+      background:linear-gradient(180deg,#fff,#fff5f9);
+      border:1px solid var(--line);
+      box-shadow:var(--soft-shadow);
+      display:grid;
+      place-items:center;
+      padding:20px;
+    }
+
+    .hero-badges{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:14px;
+    }
+
+    .badge{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:16px 18px;
+      box-shadow:var(--soft-shadow);
+    }
+
+    .badge small{
+      display:block;
+      color:#987985;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:800;
+    }
+
+    .badge strong{
+      display:block;
+      margin-top:8px;
+      font-size:18px;
+      line-height:1.3;
+    }
+
+    .badge span.meta{
+      display:block;
+      margin-top:6px;
+      font-size:14px;
+      line-height:1.5;
+      color:var(--muted);
+      overflow-wrap:anywhere;
+    }
+
+    section{padding:76px 0}
+
+    .section-head{
+      text-align:center;
+      margin-bottom:34px;
+    }
+
+    .tag{
+      color:var(--pink-deep);
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      font-size:12px;
+      font-weight:900;
+    }
+
+    .section-head h3{
+      margin:10px 0 10px;
+      font-family:"Fredoka", sans-serif;
+      font-size:52px;
+      line-height:1;
+    }
+
+    .section-head p{
+      margin:0 auto;
+      max-width:760px;
+      color:var(--muted);
+      font-size:16px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .service{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:26px;
+      box-shadow:var(--soft-shadow);
+      transition:.2s ease;
+    }
+
+    .service:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+    }
+
+    .icon-pill{
+      width:58px;
+      height:58px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      margin-bottom:16px;
+      background:linear-gradient(135deg,var(--pink-soft),#fff);
+      border:1px solid var(--line);
+    }
+
+    .service h4{
+      margin:0 0 10px;
+      font-size:22px;
+      line-height:1.2;
+    }
+
+    .service p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .panel{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .hours-grid{
+      display:grid;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .hours-row{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      padding:13px 0;
+      border-bottom:1px solid #f4e3ea;
+      font-weight:700;
+      color:#654f58;
+    }
+
+    .hours-row:last-child{border-bottom:none}
+
+    .mini-list{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .mini-item{
+      background:#fff7fa;
+      border:1px solid #f6dfe7;
+      border-radius:18px;
+      padding:14px 16px;
+      color:#6a5660;
+      font-size:14px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .contact-panel{
+      background:linear-gradient(135deg,var(--pink-deep),#f08fb0);
+      color:#fff;
+      border-radius:30px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-panel h3{
+      margin:10px 0 10px;
+      font-family:"Fredoka", sans-serif;
+      font-size:50px;
+      line-height:.96;
+    }
+
+    .contact-panel p{
+      color:#fff4f8;
+      margin:0 0 12px;
+    }
+
+    .contact-links{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .contact-pill{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:18px;
+      padding:14px 16px;
+      color:#fff;
+      font-weight:700;
+      overflow-wrap:anywhere;
+      word-break:break-word;
+    }
+
+    .map-wrap{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:30px;
+      padding:12px;
+      box-shadow:var(--shadow);
+    }
+
+    iframe{
+      width:100%;
+      height:470px;
+      border:0;
+      border-radius:22px;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      background:rgba(255,255,255,.86);
+      color:#856c76;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      padding:24px 0;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    @media (max-width: 1040px){
+      .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr 1fr}
+      .hero h2{font-size:60px}
+    }
+
+    @media (max-width: 760px){
+      .nav-links{display:none}
+      .hero{padding:60px 0 38px}
+      .hero h2{font-size:46px}
+      .section-head h3,.contact-panel h3{font-size:40px}
+      .services,.hero-badges{grid-template-columns:1fr}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+      .pet-scene{min-height:280px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="34" height="34" fill="none">
+            <circle cx="20" cy="16" r="7" fill="#df6f93"/>
+            <circle cx="42" cy="16" r="7" fill="#df6f93"/>
+            <circle cx="15" cy="33" r="6" fill="#df6f93"/>
+            <circle cx="49" cy="33" r="6" fill="#df6f93"/>
+            <path d="M32 51c-8 0-14-5-14-12 0-6 5-10 10-10 2 0 3 0 4 1 1-1 2-1 4-1 5 0 10 4 10 10 0 7-6 12-14 12Z" fill="#7aa98d"/>
+            <path d="M42 10c7 1 12 6 13 13" stroke="#f59bb5" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Pawny Tail</h1>
+          <p>Grooming & More</p>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#hours">Hours</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.instagram.com/pawnytailtoronto/" target="_blank" rel="noopener noreferrer" class="dm-btn">DM to Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="spark"></span> We care • Soft style • Grooming with heart</span>
+          <h2>Gentle grooming with a cute, caring, playful brand feel.</h2>
+          <p class="lead">
+            This website concept is styled around Pawny Tail’s public Instagram presence: soft colors, a cuter name-driven identity,
+            and a sweeter overall vibe than a standard pet-care template. It is designed to feel more boutique, friendly, and Instagram-ready.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://www.instagram.com/pawnytailtoronto/" target="_blank" rel="noopener noreferrer">DM for Appointments</a>
+            <a class="btn btn-secondary" href="#contact">Visit the Shop</a>
+            <a class="btn btn-secondary" href="#hours">See Hours</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="pet-scene" aria-hidden="true">
+            <svg viewBox="0 0 420 320" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="70" y="233" width="280" height="18" rx="9" fill="#F2D2BF"/>
+              <circle cx="210" cy="160" r="78" fill="#FFF0F5"/>
+              <ellipse cx="143" cy="120" rx="34" ry="62" transform="rotate(-24 143 120)" fill="#B9DDC9"/>
+              <ellipse cx="277" cy="120" rx="34" ry="62" transform="rotate(24 277 120)" fill="#F4C5A9"/>
+              <circle cx="181" cy="158" r="8" fill="#523D45"/>
+              <circle cx="239" cy="158" r="8" fill="#523D45"/>
+              <ellipse cx="210" cy="182" rx="15" ry="10" fill="#DF6F93"/>
+              <path d="M194 199c9 10 23 10 32 0" stroke="#523D45" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="126" cy="152" r="16" fill="#F59BB5"/>
+              <circle cx="294" cy="152" r="16" fill="#7AA98D"/>
+              <rect x="145" y="230" width="24" height="48" rx="12" fill="#FFF0F5"/>
+              <rect x="181" y="230" width="24" height="48" rx="12" fill="#FFF0F5"/>
+              <rect x="217" y="230" width="24" height="48" rx="12" fill="#FFF0F5"/>
+              <rect x="253" y="230" width="24" height="48" rx="12" fill="#FFF0F5"/>
+              <path d="M286 213c30 4 52 23 58 47" stroke="#F4C5A9" stroke-width="16" stroke-linecap="round"/>
+              <path d="M291 81c13-4 27-1 40 8" stroke="#DF6F93" stroke-width="10" stroke-linecap="round"/>
+              <circle cx="327" cy="93" r="12" fill="#DF6F93"/>
+            </svg>
+          </div>
+
+          <div class="hero-badges">
+            <div class="badge">
+              <small>Location</small>
+              <strong>Unit 103<br>60 Brian Harrison Way</strong>
+              <span class="meta">Scarborough, ON M1P 5J5</span>
+            </div>
+            <div class="badge">
+              <small>Booking</small>
+              <strong>DM for appointments</strong>
+              <span class="meta">@pawnytailtoronto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">Services</div>
+          <h3>Designed to match a softer pet-boutique vibe</h3>
+          <p>
+            The fonts, color palette, rounded shapes, and illustration style were chosen to feel closer to the brand name and Instagram aesthetic than a generic dog-grooming site.
+          </p>
+        </div>
+
+        <div class="services">
+          <div class="service">
+            <div class="icon-pill">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#df6f93" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 6l13 13"/><path d="M15 4l5 5"/><path d="M4 15l5 5"/>
+              </svg>
+            </div>
+            <h4>Full Grooming</h4>
+            <p>Use this block for complete grooming visits, trims, tidy styling, and coat care in a warm, gentle environment.</p>
+          </div>
+
+          <div class="service">
+            <div class="icon-pill">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#7aa98d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 4h8l2 6H6l2-6Z"/><path d="M7 10v6a5 5 0 0 0 10 0v-6"/>
+              </svg>
+            </div>
+            <h4>Bath & Freshen Up</h4>
+            <p>A lighter service area for washing, drying, fluffing, and helping pets leave looking soft, clean, and fresh.</p>
+          </div>
+
+          <div class="service">
+            <div class="icon-pill">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#df6f93" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v18"/><path d="M5 8h14"/><path d="M7 13h10"/>
+              </svg>
+            </div>
+            <h4>Nails & Touch-Ups</h4>
+            <p>Perfect for small maintenance visits like nail care, quick cleanup, and in-between appointment grooming support.</p>
+          </div>
+
+          <div class="service">
+            <div class="icon-pill">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#7aa98d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><path d="M5 18c2-3 5-4 7-4s5 1 7 4"/>
+              </svg>
+            </div>
+            <h4>Gentle Care</h4>
+            <p>Keep the focus on comfort, patience, and a softer client experience that matches the “we care” message.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" style="background:linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,230,239,.38));">
+      <div class="container">
+        <div class="section-head">
+          <div class="tag">About the Look</div>
+          <h3>More cute and boutique, less plain and corporate</h3>
+          <p>
+            Public Instagram details show the shop at Unit 103, 60 Brian Harrison Way, with hours listed as Tuesday to Sunday from 10:00 AM to 7:00 PM and DM-based booking.
+          </p>
+        </div>
+
+        <div class="split">
+          <div class="panel">
+            <div class="tag">Brand Direction</div>
+            <h4 style="margin:10px 0 0;font-size:30px;font-family:'Fredoka',sans-serif;">Built around the name “Pawny Tail”</h4>
+            <div class="mini-list">
+              <div class="mini-item">Rounded type and soft pinks make the page feel playful and approachable.</div>
+              <div class="mini-item">Mint and peach accents keep it pet-friendly instead of overly feminine or generic.</div>
+              <div class="mini-item">The custom logo-style header is inspired by the brand feel, since I could not reliably extract the exact logo from Instagram here.</div>
+            </div>
+          </div>
+
+          <div class="panel" id="hours">
+            <div class="tag">Hours</div>
+            <h4 style="margin:10px 0 0;font-size:30px;font-family:'Fredoka',sans-serif;">Tuesday to Sunday</h4>
+            <div class="hours-grid">
+              <div class="hours-row"><span>Monday</span><span>Closed</span></div>
+              <div class="hours-row"><span>Tuesday</span><span>10:00 AM – 7:00 PM</span></div>
+              <div class="hours-row"><span>Wednesday</span><span>10:00 AM – 7:00 PM</span></div>
+              <div class="hours-row"><span>Thursday</span><span>10:00 AM – 7:00 PM</span></div>
+              <div class="hours-row"><span>Friday</span><span>10:00 AM – 7:00 PM</span></div>
+              <div class="hours-row"><span>Saturday</span><span>10:00 AM – 7:00 PM</span></div>
+              <div class="hours-row"><span>Sunday</span><span>10:00 AM – 7:00 PM</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <div class="tag" style="color:#ffeaf2">Contact</div>
+          <h3>Want a site that feels like the brand?</h3>
+          <p>
+            This concept uses the public address, booking method, and Instagram profile already shown online, while keeping the page soft, playful, and recognizable.
+          </p>
+
+          <div class="contact-links">
+            <div class="contact-pill">Address: Unit 103, 60 Brian Harrison Way, Scarborough, ON M1P 5J5</div>
+            <a class="contact-pill" href="https://www.instagram.com/pawnytailtoronto/" target="_blank" rel="noopener noreferrer">Instagram: @pawnytailtoronto</a>
+            <div class="contact-pill">Booking: DM for appointments</div>
+            <div class="contact-pill">Hours: Tue–Sun, 10:00 AM–7:00 PM</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn" style="background:#fff;color:var(--pink-deep)" href="https://www.instagram.com/pawnytailtoronto/" target="_blank" rel="noopener noreferrer">Open Instagram</a>
+            <a class="btn" style="border:1px solid rgba(255,255,255,.22);color:#fff" href="https://maps.google.com/?q=60+Brian+Harrison+Way+Unit+103,+Scarborough,+ON+M1P+5J5" target="_blank" rel="noopener noreferrer">Get Directions</a>
+          </div>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            title="Pawny Tail Location"
+            src="https://www.google.com/maps?q=60+Brian+Harrison+Way+Unit+103,+Scarborough,+ON+M1P+5J5&z=15&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Pawny Tail Grooming & More. All rights reserved.</div>
+      <div>Soft, playful website concept tailored to the public brand vibe.</div>
+    </div>
+  </footer>
+</body>
+</html>
